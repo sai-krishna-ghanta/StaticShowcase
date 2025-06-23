@@ -7,7 +7,7 @@ export const personalInfo = {
   email: "ghanta20102@iiitnr.edu.in",
   phone: "+1-502-821-2059",
   location: "Athens, Georgia, USA",
-  profileImage: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400",
+  profileImage: "@assets/image_1750648862297.png",
   bio: [
     "I am a PhD student in Artificial Intelligence at the University of Georgia, working under the guidance of Dr. Ramviyas Parasuraman at the HeRoLab. My research focuses on multi-robot systems, computer vision, and autonomous navigation in complex environments.",
     "I have been actively researching on robotics and AI, focusing on multi-robot systems, SLAM, Autonomous systems, and Multi-Agent Robot Task Planning using Large Language Models.",

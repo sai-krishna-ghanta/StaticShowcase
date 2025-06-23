@@ -156,21 +156,25 @@ const Home = () => {
               <h2 className="text-3xl font-bold text-slate-800 mb-4">Recent Updates</h2>
             </div>
 
-            <Card className="mb-8">
-              <CardContent className="p-6">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center space-x-4">
-                    <div className="text-sm font-medium text-slate-500">
-                      {updates[0].date}
+            <div className="space-y-4 mb-8">
+              {updates.map((update, index) => (
+                <Card key={index}>
+                  <CardContent className="p-6">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center space-x-4">
+                        <div className="text-sm font-medium text-slate-500">
+                          {update.date}
+                        </div>
+                        <Badge className={getBadgeColor(update.type)}>
+                          {update.type}
+                        </Badge>
+                      </div>
+                      <div className="text-sm text-slate-600">{update.description}</div>
                     </div>
-                    <Badge className={getBadgeColor(updates[0].type)}>
-                      {updates[0].type}
-                    </Badge>
-                  </div>
-                  <div className="text-sm text-slate-600">{updates[0].description}</div>
-                </div>
-              </CardContent>
-            </Card>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
 
             <div className="text-center">
               <Link href="/updates">
