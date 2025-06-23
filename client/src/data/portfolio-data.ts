@@ -7,12 +7,11 @@ export const personalInfo = {
   email: "ghanta20102@iiitnr.edu.in",
   phone: "+1-502-821-2059",
   location: "Athens, Georgia, USA",
-  profileImage: "@assets/image_1750648862297.png",
+  profileImage: "@attached_assets/image_1750648862297.png",
   bio: [
     "I am a PhD student in Artificial Intelligence at the University of Georgia, working under the guidance of Dr. Ramviyas Parasuraman at the HeRoLab. My research focuses on multi-robot systems, computer vision, and autonomous navigation in complex environments.",
-    "I have been actively researching on robotics and AI, focusing on multi-robot systems, SLAM, Autonomous systems, and Multi-Agent Robot Task Planning using Large Language Models.",
-    "I completed my Bachelor of Technology in Data Science and Artificial Intelligence from IIIT Naya Raipur with Dean's List recognition and a GPA of 8.96/10.",
-    "Prior to my PhD, I gained valuable research experience at Samsung R&D Institute, Louisville Automation & Robotics Research Institute, and various academic labs, focusing on deep learning applications in computer vision and robotics."
+    "I have been actively researching on robotics and AI, focusing on multi-robot systems, SLAM, Autonomous systems.",
+    "Prior to my PhD, I gained valuable research experience at Samsung R&D Institute, Louisville Automation & Robotics Research Institute, and various academic labs, focusing on deep learning applications in computer vision and robotics. I completed my Bachelor of Technology in Data Science and Artificial Intelligence from IIIT Naya Raipur with Dean's List recognition and a GPA of 8.96/10."
   ]
 };
 
