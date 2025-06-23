@@ -24,25 +24,25 @@ export const socialLinks = {
 export const researchInterests = [
   {
     title: "Multi-Robot Systems",
-    description: "Cooperative exploration, distributed localization, task planning",
+    description: "Distributed Perception and Localization, Task Planning",
     icon: "🤖",
     color: "purple"
   },
   {
     title: "Computer Vision",
-    description: "SLAM, 3D object detection, RGB-D and LiDAR fusion",
+    description: "SLAM, 3D object detection, RGB-D and LiDAR",
     icon: "👁️",
     color: "red"
   },
   {
     title: "Robotics & AI",
-    description: "Autonomous navigation, sensor fusion, Gaussian Processes",
+    description: "Autonomous navigation, Sensor Fusion, Informative Sampling and Path Planning",
     icon: "🧠",
     color: "pink"
   },
   {
     title: "Deep Learning",
-    description: "DEEP RL, GANs, Vision Transformers",
+    description: "Reinforcement Learning, GNNs, A2C",
     icon: "🔗",
     color: "blue"
   }
@@ -52,7 +52,7 @@ export const researchProjects = [
   {
     title: "SPACE: 3D Spatial Co-operation and Exploration Framework for Robust Mapping and Coverage with Multi-Robot Systems",
     authors: ["Ghanta Sai Krishna", "Ramviyas Parasuraman"],
-    venue: "arXiv preprint arXiv:2411.02524 (2024), submitted to IEEE IROS 2025",
+    venue: "arXiv preprint arXiv:2411.02524 (2024), submitted to IEEE RAL",
     year: "2024",
     description: "Developed an online 3D spatial exploration framework for multi-robot systems utilizing situational awareness and dynamic filter to mitigate ghosting trail effect in 3D reconstructions.",
     links: {
@@ -64,7 +64,7 @@ export const researchProjects = [
   {
     title: "MGPRL: Distributed Multi-Gaussian Processes for Wi-Fi-based Multi-Robot Relative Localization in Large Indoor Environments",
     authors: ["Ghanta Sai Krishna", "Ramviyas Parasuraman"],
-    venue: "submitted to IEEE IROS 2025",
+    venue: "Accepted at IEEE IROS 2025",
     year: "2024",
     description: "Introduced a distributed multi-robot relative localization approach leveraging uncertainty-aware Gaussian Processes and Wi-Fi RSSI signals for robust, efficient pose estimation in GPS-denied environments.",
     links: {
@@ -76,21 +76,9 @@ export const researchProjects = [
   {
     title: "3DS-SLAM: A 3D Object Detection based Semantic SLAM towards Dynamic Indoor Environments",
     authors: ["Ghanta Sai Krishna", "Kundrapu Supriya", "Sabur Baidya"],
-    venue: "arXiv preprint arXiv:2310.06385 (2023), submitted to IEEE IROS 2025",
+    venue: "arXiv preprint arXiv:2310.06385 (2023), Accepted at IEEE IROS 2025",
     year: "2023",
     description: "Developed real-time 3D Object Detection in Visual SLAM with RGB-D and LiDAR sensors for dynamic indoor environments.",
-    links: {
-      paper: "#",
-      code: "#",
-      arxiv: "#"
-    }
-  },
-  {
-    title: "Multi-Agent Robot Task Planning using Large Language Models",
-    authors: ["Ghanta Sai Krishna", "Ramviyas Parasuraman"],
-    venue: "Current Research at HeRoLab",
-    year: "2024",
-    description: "Currently working on Multi-Agent Robot Task Planning using Large Language Models with a focus on visual reconstructions for embodied multi-robot task allocation.",
     links: {
       paper: "#",
       code: "#",
