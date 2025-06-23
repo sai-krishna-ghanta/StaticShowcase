@@ -18,29 +18,29 @@ const Publications = () => {
           {/* Journal Papers */}
           <div className="mb-16">
             <h2 className="text-2xl font-bold text-slate-800 mb-8">Journal Papers</h2>
-
-            {publications.journal.map((paper, index) => (
-              <Card key={index} className="bg-slate-bg">
-                <CardContent className="p-8">
-                  <h3 className="text-xl font-semibold text-slate-800 mb-3">{paper.title}</h3>
-                  <div className="mb-3">
-                    {paper.authors.map((author, authorIndex) => (
-                      <span key={authorIndex}>
-                        <span className="text-blue-primary font-medium">{author}</span>
-                        {authorIndex < paper.authors.length - 1 && ", and "}
-                      </span>
-                    ))}
-                  </div>
-                  <div className="text-sm text-slate-500">{paper.venue}</div>
-                </CardContent>
-              </Card>
-            ))}
+            <div className="space-y-6">
+              {publications.journal.map((paper, index) => (
+                <Card key={index} className="bg-slate-bg">
+                  <CardContent className="p-8">
+                    <h3 className="text-xl font-semibold text-slate-800 mb-3">{paper.title}</h3>
+                    <div className="mb-3">
+                      {paper.authors.map((author, authorIndex) => (
+                        <span key={authorIndex}>
+                          <span className="text-blue-primary font-medium">{author}</span>
+                          {authorIndex < paper.authors.length - 1 && ", "}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="text-sm text-slate-500">{paper.venue}</div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
 
           {/* Conference Papers */}
           <div className="mb-16">
             <h2 className="text-2xl font-bold text-slate-800 mb-8">Conference Papers</h2>
-
             <div className="space-y-6">
               {publications.conference.map((paper, index) => (
                 <Card key={index} className="bg-slate-bg">
@@ -50,7 +50,30 @@ const Publications = () => {
                       {paper.authors.map((author, authorIndex) => (
                         <span key={authorIndex}>
                           <span className="text-blue-primary font-medium">{author}</span>
-                          {authorIndex < paper.authors.length - 1 && ", and "}
+                          {authorIndex < paper.authors.length - 1 && ", "}
+                        </span>
+                      ))}
+                    </div>
+                    <div className="text-sm text-slate-500">{paper.venue}</div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* Submitted Papers */}
+          <div className="mb-16">
+            <h2 className="text-2xl font-bold text-slate-800 mb-8">Submitted Papers</h2>
+            <div className="space-y-6">
+              {publications.submitted.map((paper, index) => (
+                <Card key={index} className="bg-slate-bg">
+                  <CardContent className="p-8">
+                    <h3 className="text-xl font-semibold text-slate-800 mb-3">{paper.title}</h3>
+                    <div className="mb-3">
+                      {paper.authors.map((author, authorIndex) => (
+                        <span key={authorIndex}>
+                          <span className="text-blue-primary font-medium">{author}</span>
+                          {authorIndex < paper.authors.length - 1 && ", "}
                         </span>
                       ))}
                     </div>

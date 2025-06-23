@@ -40,15 +40,15 @@ const Navigation = () => {
             <div className="ml-10 flex items-baseline space-x-8">
               {navItems.map((item) => (
                 <Link key={item.href} href={item.href}>
-                  <a
-                    className={`px-3 py-2 text-sm font-medium transition-colors ${
+                  <span
+                    className={`px-3 py-2 text-sm font-medium transition-colors cursor-pointer ${
                       isActive(item.href)
                         ? "text-blue-primary border-b-2 border-blue-primary"
                         : "text-slate-custom hover:text-blue-primary"
                     }`}
                   >
                     {item.label}
-                  </a>
+                  </span>
                 </Link>
               ))}
             </div>
@@ -74,8 +74,8 @@ const Navigation = () => {
           <div className="px-2 pt-2 pb-3 space-y-1">
             {navItems.map((item) => (
               <Link key={item.href} href={item.href}>
-                <a
-                  className={`block px-3 py-2 rounded-md text-base font-medium ${
+                <span
+                  className={`block px-3 py-2 rounded-md text-base font-medium cursor-pointer ${
                     isActive(item.href)
                       ? "text-blue-primary bg-blue-50"
                       : "text-slate-custom hover:text-blue-primary hover:bg-slate-50"
@@ -83,7 +83,7 @@ const Navigation = () => {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.label}
-                </a>
+                </span>
               </Link>
             ))}
           </div>

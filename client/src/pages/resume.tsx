@@ -2,7 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Download } from "lucide-react";
-import { education, experience, skills } from "@/data/portfolio-data";
+import { education, experience, skills, achievements, positions } from "@/data/portfolio-data";
 
 const Resume = () => {
   const getExperienceColor = (color: string) => {
@@ -42,7 +42,30 @@ const Resume = () => {
                     <h3 className="text-xl font-semibold text-slate-800">{edu.degree}</h3>
                     <span className="text-sm text-slate-500 font-medium">{edu.period}</span>
                   </div>
-                  <div className="text-blue-primary font-medium mb-3">{edu.institution}</div>
+                  <div className="text-blue-primary font-medium mb-2">{edu.institution}</div>
+                  {edu.gpa && (
+                    <div className="text-sm text-slate-600 mb-2">
+                      <span className="font-medium">GPA:</span> {edu.gpa}
+                    </div>
+                  )}
+                  {edu.awards && (
+                    <div className="mb-3">
+                      {edu.awards.map((award, awardIndex) => (
+                        <Badge key={awardIndex} variant="outline" className="bg-green-100 text-green-800 mr-2 mb-1">
+                          {award}
+                        </Badge>
+                      ))}
+                    </div>
+                  )}
+                  {edu.achievements && (
+                    <div className="mb-3">
+                      {edu.achievements.map((achievement, achIndex) => (
+                        <Badge key={achIndex} variant="outline" className="bg-purple-100 text-purple-800 mr-2 mb-1">
+                          {achievement}
+                        </Badge>
+                      ))}
+                    </div>
+                  )}
                   <p className="text-slate-600">{edu.description}</p>
                 </div>
               ))}
@@ -60,7 +83,15 @@ const Resume = () => {
                     <h3 className="text-xl font-semibold text-slate-800">{exp.title}</h3>
                     <span className="text-sm text-slate-500 font-medium">{exp.period}</span>
                   </div>
-                  <div className="text-blue-primary font-medium mb-3">{exp.organization}</div>
+                  <div className="text-blue-primary font-medium mb-1">{exp.organization}</div>
+                  {exp.location && (
+                    <div className="text-sm text-slate-500 mb-1">{exp.location}</div>
+                  )}
+                  {exp.advisor && (
+                    <div className="text-sm text-slate-600 mb-3">
+                      <span className="font-medium">Advisor:</span> {exp.advisor}
+                    </div>
+                  )}
                   <p className="text-slate-600">{exp.description}</p>
                 </div>
               ))}
@@ -86,15 +117,63 @@ const Resume = () => {
               </div>
 
               <div>
-                <h3 className="text-lg font-semibold text-slate-800 mb-4">Frameworks & Tools</h3>
+                <h3 className="text-lg font-semibold text-slate-800 mb-4">ML Frameworks</h3>
                 <div className="flex flex-wrap gap-2">
-                  {skills.frameworks.map((skill, index) => (
+                  {skills.mlFrameworks.map((skill, index) => (
                     <Badge key={index} variant="outline" className="bg-green-100 text-green-800">
                       {skill}
                     </Badge>
                   ))}
                 </div>
               </div>
+
+              <div>
+                <h3 className="text-lg font-semibold text-slate-800 mb-4">Robotic Frameworks</h3>
+                <div className="flex flex-wrap gap-2">
+                  {skills.roboticFrameworks.map((skill, index) => (
+                    <Badge key={index} variant="outline" className="bg-purple-100 text-purple-800">
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-semibold text-slate-800 mb-4">Cloud & Database</h3>
+                <div className="flex flex-wrap gap-2">
+                  {skills.cloudDatabase.map((skill, index) => (
+                    <Badge key={index} variant="outline" className="bg-orange-100 text-orange-800">
+                      {skill}
+                    </Badge>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Achievements Section */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold text-slate-800 mb-8">Achievements & Awards</h2>
+            <div className="space-y-4">
+              {achievements.map((achievement, index) => (
+                <div key={index} className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-blue-primary rounded-full mt-2 flex-shrink-0"></div>
+                  <p className="text-slate-600">{achievement}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Positions of Responsibility */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-bold text-slate-800 mb-8">Positions of Responsibility</h2>
+            <div className="space-y-4">
+              {positions.map((position, index) => (
+                <div key={index} className="flex items-start space-x-3">
+                  <div className="w-2 h-2 bg-green-500 rounded-full mt-2 flex-shrink-0"></div>
+                  <p className="text-slate-600">{position}</p>
+                </div>
+              ))}
             </div>
           </div>
 

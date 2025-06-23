@@ -120,70 +120,45 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Contact Form */}
+            {/* Collaboration Information */}
             <div>
-              <h2 className="text-2xl font-semibold text-slate-800 mb-6">Send a Message</h2>
+              <h2 className="text-2xl font-semibold text-slate-800 mb-6">Research Collaboration</h2>
 
               <Card>
-                <CardContent className="p-6">
-                  <form onSubmit={handleSubmit} className="space-y-6">
-                    <div>
-                      <Label htmlFor="name">Name</Label>
-                      <Input
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        placeholder="Your Name"
-                        required
-                      />
+                <CardContent className="p-8">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                      <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                      </svg>
                     </div>
-
-                    <div>
-                      <Label htmlFor="email">Email</Label>
-                      <Input
-                        id="email"
-                        name="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        placeholder="your.email@example.com"
-                        required
-                      />
+                    <h3 className="text-xl font-semibold text-slate-800 mb-4">
+                      Interested in Collaborating?
+                    </h3>
+                    <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+                      I am actively seeking collaboration opportunities in robotics and AI research. 
+                      My current focus areas include multi-robot systems, computer vision, SLAM, 
+                      and autonomous navigation systems.
+                    </p>
+                    <p className="text-base text-slate-600 mb-8">
+                      Please reach out through email or LinkedIn for research collaborations, 
+                      academic partnerships, or conference opportunities.
+                    </p>
+                    <div className="flex justify-center space-x-4">
+                      <Button asChild className="bg-blue-primary hover:bg-blue-secondary">
+                        <a href={`mailto:${personalInfo.email}`}>
+                          <Mail className="mr-2 h-4 w-4" />
+                          Email Me
+                        </a>
+                      </Button>
+                      <Button variant="outline" asChild>
+                        <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer">
+                          <Linkedin className="mr-2 h-4 w-4" />
+                          Connect on LinkedIn
+                        </a>
+                      </Button>
                     </div>
-
-                    <div>
-                      <Label htmlFor="subject">Subject</Label>
-                      <Select onValueChange={handleSelectChange}>
-                        <SelectTrigger>
-                          <SelectValue placeholder="Select a subject" />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="research-collaboration">Research Collaboration</SelectItem>
-                          <SelectItem value="phd-opportunities">PhD Opportunities</SelectItem>
-                          <SelectItem value="conference-workshop">Conference/Workshop</SelectItem>
-                          <SelectItem value="general-inquiry">General Inquiry</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-
-                    <div>
-                      <Label htmlFor="message">Message</Label>
-                      <Textarea
-                        id="message"
-                        name="message"
-                        value={formData.message}
-                        onChange={handleInputChange}
-                        placeholder="Your message..."
-                        rows={6}
-                        required
-                      />
-                    </div>
-
-                    <Button type="submit" className="w-full bg-blue-primary hover:bg-blue-secondary">
-                      Send Message
-                    </Button>
-                  </form>
+                  </div>
                 </CardContent>
               </Card>
             </div>
